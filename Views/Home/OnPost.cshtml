@@ -1,0 +1,29 @@
+@model Employee
+
+<h1>Insert Employee</h1>
+
+<form method = "post" asp-action = "OnPost">
+
+    <div>
+        
+    <label for = "id"> EmployeeId : </label>
+    <input type= "number" name = "id" id = "id"/>
+    
+    </div>
+    <br>
+    <div>
+    
+    <label for = "name"> EmployeeName : </label>
+    <input type= "text" name = "name" id = "name"/>
+    
+    </div>
+
+    <button type ="submit">submit</button>
+    
+</form>
+
+
+<a asp-action="Index">Back to List</a>
+
+
+

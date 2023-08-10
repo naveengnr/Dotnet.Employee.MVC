@@ -1,0 +1,26 @@
+@model Employee
+
+@* @{
+    ViewData["Title"] = "Employee Details";
+} *@
+
+<h1>Employee Details</h1>
+
+<form method="get" asp-action="GetById">
+    <label for="employeeId">Enter Employee ID:</label>
+    <input type="number" id="id" name="id">
+    <button type="submit">Get Details</button>
+</form>
+
+@{
+    if (Model != null)
+{
+    <div>
+        <h3>Employee ID: @Model.id</h3>
+        <p>Name: @Model.name</p>
+    </div>
+}
+
+}
+
+<a asp-action="GetEmployees">Back to List</a>
